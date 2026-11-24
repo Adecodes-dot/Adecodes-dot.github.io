@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ademola Emmanuel Adegbola - Resume</title>
+<meta name="author" content="Ademola Emmanuel Adegbola">
+<meta name="subject" content="Full-Stack Software Engineer resume">
+<meta name="keywords" content="Full-Stack Software Engineer, TypeScript, React, Next.js, Node.js, PostgreSQL, Supabase, SQL, Cloudflare Workers, Playwright, Python">
+<!-- ATS-friendly by design: one column, standard headings, real text, no tables, icons or images. -->
+<style>
+  @page { size: A4; margin: 11mm 14mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 9.4pt; line-height: 1.32; color: #111; }
+  a { color: #111; text-decoration: none; }
+  h1 { margin: 0; font-size: 19pt; letter-spacing: .2pt; }
+  .title { margin: 2pt 0 3pt; font-size: 10.5pt; font-weight: bold; color: #333; }
+  .contact { margin: 0; font-size: 9.2pt; }
+  h2 { margin: 7pt 0 2.5pt; padding-bottom: 1.5pt; border-bottom: 1px solid #111; font-size: 10.2pt; text-transform: uppercase; letter-spacing: .6pt; }
+  p { margin: 0; }
+  .row { display: flex; justify-content: space-between; gap: 12pt; margin-top: 5pt; }
+  .row strong { font-size: 10pt; }
+  .meta { font-style: italic; color: #333; }
+  ul { margin: 2pt 0 0; padding-left: 13pt; }
+  li { margin: 1.6pt 0; }
+  .skills p { margin: 1.2pt 0; }
+</style>
+</head>
+<body>
+<h1>Ademola Emmanuel Adegbola</h1>
+<p class="title">Full-Stack Software Engineer</p>
+<p class="contact">Port Harcourt, Nigeria (open to remote) | <a href="mailto:ademola1005@gmail.com">ademola1005@gmail.com</a> | <a href="https://adecodes-dot.github.io">adecodes-dot.github.io</a> | <a href="https://github.com/Adecodes-dot">github.com/Adecodes-dot</a></p>
+
+<h2>Summary</h2>
+<p>Full-stack software engineer with a B.Sc. in Software Engineering (2026) who ships production software end to end. Founder and sole developer of Ajobook, an accounting SaaS that runs a Nigerian business's books in a live pilot. Builds real-time and data-heavy applications in TypeScript, React, Next.js, Node.js and PostgreSQL, with automated tests and measured results. Seeking a remote junior or graduate full-stack engineering role.</p>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+  <p><strong>Languages:</strong> TypeScript, JavaScript, SQL, Python, HTML, CSS</p>
+  <p><strong>Frontend:</strong> React, Next.js (App Router), Tailwind CSS, Three.js, Vite, Progressive Web Apps, Electron</p>
+  <p><strong>Backend and data:</strong> Node.js, PostgreSQL, Supabase (Auth, row-level security), SQLite, REST APIs, WebSockets, Cloudflare Workers, Durable Objects, D1</p>
+  <p><strong>Testing and delivery:</strong> Playwright, Vitest, node:test, GitHub Actions (CI), Vercel, Git, database migrations</p>
+</div>
+
+<h2>Experience</h2>
+<div class="row"><span><strong>Founder and Full-Stack Engineer</strong>, Ajobook (ajobook.com), Remote</span><span class="meta">Mar 2026 – Present</span></div>
+<p class="meta">Accounting and point-of-sale SaaS for Nigerian small businesses. Next.js, React, PostgreSQL, Supabase, Vercel.</p>
+<ul>
+  <li>Moved a hospitality business off Excel in a live pilot, with 9 months of statements from 2 bank accounts booked and reconciled to the kobo, by building bank-statement PDF import, booking and reconciliation into a double-entry journal.</li>
+  <li>Released schema changes to a live client's books with zero balance changes across 5,902 journal entries and a 28 of 28 smoke test, by running every release through 38 staged PostgreSQL migrations, before/after balance snapshots and function-hash checks.</li>
+  <li>Blocked staff from editing or deleting financial records on 49 of 49 tables, as the owner requested, by enforcing roles with PostgreSQL row-level security, an append-only change history and per-shift cash handover.</li>
+  <li>Kept the owner dashboard at 0.1–0.3 s on 25,000 journal entries and booked a 5,913-line bank statement in 9 s (undo in 1.3 s), by posting entries through database triggers and set-based SQL.</li>
+</ul>
+
+<h2>Projects</h2>
+<div class="row"><span><strong>Pit Wall</strong>, offline AI race engineer for PS5 sim racing | <a href="https://github.com/Adecodes-dot/pitwall">github.com/Adecodes-dot/pitwall</a></span><span class="meta">Oct 2026 – Nov 2026</span></div>
+<p class="meta">TypeScript, Node.js, React, Electron, SQLite, WebSockets</p>
+<ul>
+  <li>Delivered spoken strategy calls 71 ms (p95) after each decision, by decoding live F1 25 UDP and Gran Turismo 7 encrypted telemetry into one schema and routing calls through a priority radio queue.</li>
+  <li>Grew the suite to 291 automated tests (Vitest, Playwright), by turning every defect found in a real race session into a regression test.</li>
+</ul>
+
+<div class="row"><span><strong>PhysLab</strong>, open-data physics workbench | <a href="https://adecodes-dot.github.io/physlab/">adecodes-dot.github.io/physlab</a></span><span class="meta">Nov 2026</span></div>
+<p class="meta">JavaScript, Canvas, GitHub Actions, GitHub Pages</p>
+<ul>
+  <li>Reproduced CMS-published particle masses to within 0.0006 GeV from 100,000 real CERN collision events, by writing a pure-function physics core validated against 17 published benchmarks in CI.</li>
+  <li>Found and fixed a source-data defect affecting about 5% of events, by building a validation report that cross-checks every derived quantity.</li>
+</ul>
+
+<div class="row"><span><strong>Peg Basket</strong>, real-time multiplayer 3D game | <a href="https://pegbasket.pages.dev">pegbasket.pages.dev</a></span><span class="meta">Sep 2026 – Present</span></div>
+<p class="meta">Three.js, Cloudflare Durable Objects, D1, WebSockets, Playwright</p>
+<ul>
+  <li>Made live battles produce identical results on Chrome and Safari, by replacing platform math with custom deterministic functions, hashing game state every turn and resyncing on mismatch.</li>
+</ul>
+
+<h2>Research</h2>
+<ul>
+  <li><strong>PropDesk</strong> (Node.js, Python): exposed hindsight bias that inflated a strategy's Sharpe ratio from 0.40 to 1.21, by building a backtester with bid/ask costs, prop-firm rules and Monte Carlo runs, and writing up 39 go/no-go studies.</li>
+  <li><strong>betpredict</strong> (Python): showed a Poisson/Dixon-Coles football model had no edge over the market on 20,109 matches (log loss 0.9805 vs 0.9630), by running a walk-forward backtest instead of an in-sample fit.</li>
+</ul>
+
+<h2>Education</h2>
+<div class="row"><span><strong>B.Sc. Software Engineering</strong>, University of Europe for Applied Sciences</span><span class="meta">Completed Feb 2026; conferred Nov 2026</span></div>
+</body>
+</html>

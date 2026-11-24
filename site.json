@@ -1,0 +1,229 @@
+{
+  "person": {
+    "name": "Ademola Adegbola",
+    "fullName": "Ademola Emmanuel Adegbola",
+    "handle": "Adecodes",
+    "role": "Full-stack software engineer",
+    "degree": "B.Sc. Software Engineering",
+    "university": "University of Europe for Applied Sciences",
+    "year": "2026",
+    "city": "Port Harcourt, Nigeria · remote",
+    "email": "ademola1005@gmail.com",
+    "github": "https://github.com/Adecodes-dot",
+    "linkedin": "",
+    "resume": "assets/Ademola-Adegbola-Resume.pdf",
+    "portrait": "",
+    "status": "Open to junior and graduate full-stack roles · Remote"
+  },
+  "hero": {
+    "intro": "Full-stack engineer and 2026 software engineering graduate. I founded and built Ajobook, accounting software that runs a Nigerian business's books, and I ship real-time, data-heavy apps end to end.",
+    "description": "Ademola Adegbola, full-stack software engineer (B.Sc. 2026). Founder of Ajobook. Case studies: Ajobook, Pit Wall, PhysLab and Peg Basket."
+  },
+  "stack": ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL", "Supabase", "Cloudflare Workers", "Durable Objects", "Three.js", "Python", "Playwright", "GitHub Actions"],
+  "projects": [
+    {
+      "slug": "ajobook",
+      "name": "Ajobook",
+      "planet": "craters",
+      "line": "Accounting software for Nigerian businesses, live with a pilot client. Books, point of sale, stock, payroll and owner controls.",
+      "tagline": "the books, kept honestly.",
+      "summary": "Accounting software priced in naira for small Nigerian businesses that run on Excel today. I founded it and built all of it. A hospitality business runs its books on it in a live pilot: nine months of bank statements from two accounts, reconciled to the kobo.",
+      "tags": ["Next.js", "PostgreSQL", "Supabase"],
+      "year": "2026",
+      "role": "Founder and solo developer",
+      "live": "https://ajobook.com",
+      "liveLabel": "Visit",
+      "cover": "assets/shots/ajobook.png",
+      "coverAlt": "Ajobook home page with a sample daily sales snapshot in naira",
+      "coverCaption": "ajobook.com",
+      "problem": {
+        "title": "Small businesses keep their books in spreadsheets.",
+        "text": "Lounges and shops track sales, stock and cash in Excel. Owners need real books, Nigerian tax (VAT, PAYE), and proof that staff cannot quietly change a record and keep the cash."
+      },
+      "built": {
+        "title": "Drop in what you have. Get books you can trust.",
+        "text": "Owners drop in workbooks, stock sheets and bank-statement PDFs and confirm them. Every sale, payment and stock count posts to a double-entry journal in PostgreSQL through database triggers, and every change by a person is kept."
+      },
+      "features": [
+        { "title": "Live pilot", "text": "A hospitality business's January to September statements, two bank accounts, booked and reconciled to the kobo. 5,902 journal entries, 571 sales and a 24-person payroll imported." },
+        { "title": "Owner lock", "text": "Staff can add records but never edit or delete them. Enforced with PostgreSQL row-level security on 49 of 49 tables, plus per-shift cash handover and a morning email to the owner." },
+        { "title": "Fast on real volumes", "text": "A 5,913-line bank statement books in 9 seconds and undoes in 1.3. The owner dashboard loads in 0.1 to 0.3 seconds on 25,000 entries." }
+      ],
+      "archTitle": "From spreadsheet to trusted books",
+      "arch": [
+        { "title": "Inputs", "text": "Workbooks, POS, bank-statement PDFs" },
+        { "title": "Server actions", "text": "Next.js and checked database functions" },
+        { "title": "Journal", "text": "Postgres triggers, row-level security" },
+        { "title": "Owner views", "text": "Dashboard, reports, morning email" }
+      ],
+      "lessons": [
+        "Releases to a live client follow a checklist: snapshot every balance, apply the migration in parts, compare function hashes, compare balances again, smoke-test. Balances matched before and after every checked release.",
+        "The first real user found a five-step import wizard too much. It became drop, then confirm.",
+        "Money that leaves with no explanation goes to a suspense account, not an expense, so nothing is counted twice and the owner sees what still needs an answer."
+      ]
+    },
+    {
+      "slug": "pitwall",
+      "name": "Pit Wall",
+      "planet": "bands",
+      "line": "A voice race engineer for F1 25 and Gran Turismo 7 on PS5. Reads live telemetry and speaks a call 71 ms after deciding it.",
+      "tagline": "a race engineer on the radio.",
+      "summary": "An offline race engineer for PS5 sim racers. It decodes live F1 25 and GT7 telemetry, learns each track from your laps, and talks to you on the straights, 71 ms (p95) from decision to sound. 291 automated tests.",
+      "tags": ["TypeScript", "Node.js", "React", "Electron"],
+      "year": "2026",
+      "role": "Solo: telemetry, voice, desktop app",
+      "code": "https://github.com/Adecodes-dot/pitwall",
+      "coverCaption": "Live telemetry dashboard",
+      "problem": {
+        "title": "Sim racers drive alone.",
+        "text": "Real drivers have an engineer on the radio calling gaps, fuel and tyres. A solo sim racer on a PS5 has nobody, and the game's own telemetry streams past unused."
+      },
+      "built": {
+        "title": "An engineer that runs on your laptop, with no internet.",
+        "text": "Pit Wall decodes F1's UDP packets and GT7's encrypted telemetry into one schema, keeps race state, and speaks through a priority radio queue that waits for straights. Wake word and voice run offline."
+      },
+      "features": [
+        { "title": "Two games, one schema", "text": "F1 25 UDP and GT7's Salsa20-encrypted stream decode into the same race model." },
+        { "title": "71 ms to speech", "text": "A priority queue holds calls until a straight, then speaks within 71 ms (p95) of the decision." },
+        { "title": "Tested on real races", "text": "Every bug found in a real session became a regression test. The suite stands at 291." }
+      ],
+      "arch": [
+        { "title": "Telemetry adapters", "text": "F1 UDP and GT7 decoders" },
+        { "title": "Race state", "text": "Track learning, strategy decisions" },
+        { "title": "Radio and voice", "text": "Priority queue, offline speech" },
+        { "title": "Server and store", "text": "SQLite, HTTP and WebSocket" },
+        { "title": "Dashboard", "text": "React PWA in an Electron shell" }
+      ],
+      "lessons": [
+        "Synthetic test data hid menu packets, out-laps, Wi-Fi dropouts and flashbacks. Real sessions found them; regression tests keep them found.",
+        "A language model may rephrase a radio call, never change it: any rephrase that alters a number is rejected.",
+        "37 design decisions are written down with their reasons, so the next change starts from why."
+      ]
+    },
+    {
+      "slug": "physlab",
+      "name": "PhysLab",
+      "planet": "wire",
+      "line": "Physics labs on real CERN and NASA data. Reproduces CMS-published particle masses to within 0.0006 GeV.",
+      "tagline": "physics you can poke at.",
+      "summary": "Six browser labs where you test predictions against real data: 100,000 CMS collision events and 6,470 NASA exoplanets, with uncertainties. Masses land within 0.0006 GeV of CMS's published values, in 43 kB of code.",
+      "tags": ["JavaScript", "Canvas", "GitHub Actions"],
+      "year": "2026",
+      "role": "Solo: design, physics, code, data",
+      "live": "https://adecodes-dot.github.io/physlab/",
+      "code": "https://github.com/Adecodes-dot/physlab",
+      "cover": "assets/shots/physlab.png",
+      "coverAlt": "PhysLab dimuon mass spectrum from 100,000 CMS events, with J/ψ, Υ and Z peaks marked",
+      "coverCaption": "Dimuon mass spectrum, CMS 2011 data",
+      "problem": {
+        "title": "People read about physics. They rarely test it.",
+        "text": "Open datasets from CERN and NASA are public, but using them takes specialist tools. Learners meet equations, not measurements, and never check a prediction against real data with real uncertainty."
+      },
+      "built": {
+        "title": "Labs that open in a tab and run on the real numbers.",
+        "text": "Six labs share one set of pure physics functions. A notebook makes you lock a prediction before you see the result, and a bench fits your own CSV files. No build step and no runtime dependencies."
+      },
+      "features": [
+        { "title": "Matches published physics", "text": "J/ψ, Υ and Z peaks found in 100,000 CMS events land within 0.0006 GeV of CMS's values. 17 of 17 benchmarks pass in CI." },
+        { "title": "Caught a data defect", "text": "Validation found about 5% of events with angle columns that disagreed with their momenta. The labs now compute from the momenta." },
+        { "title": "Small and fast", "text": "Six labs, a notebook with 15 missions and a CSV bench in 43 kB of gzipped JavaScript." }
+      ],
+      "arch": [
+        { "title": "Data snapshots", "text": "CMS and NASA files bundled by a fetch script" },
+        { "title": "Physics core", "text": "Pure functions, 17/17 benchmarks pass" },
+        { "title": "Notebook", "text": "Predictions saved in the browser" },
+        { "title": "Lab UI", "text": "Canvas views on GitHub Pages, CI on GitHub Actions" }
+      ],
+      "lessons": [
+        "Benchmarks against published results catch what unit tests miss: the tests were written around the same wrong columns.",
+        "Show the measurement before the formula. People ask better questions when the data comes first.",
+        "Fit errors shown are statistical only, and the page says so."
+      ]
+    },
+    {
+      "slug": "pegbasket",
+      "name": "Peg Basket",
+      "planet": "ring",
+      "line": "The Nigerian clothes-peg battle game in 3D, with live multiplayer rooms. Played in 3 countries, no app or sign-up.",
+      "tagline": "a childhood game, online.",
+      "summary": "An online 3D version of the clothes-peg battle game Nigerian kids play in the compound. Build a peg, send a room link, and battle live on a phone or a laptop. Live since September 2026 with players in 3 countries.",
+      "tags": ["Three.js", "Durable Objects", "D1"],
+      "year": "2026",
+      "role": "Solo: game design, 3D, real-time backend",
+      "live": "https://pegbasket.pages.dev",
+      "liveLabel": "Play",
+      "cover": "assets/shots/pegbasket.jpg",
+      "coverAlt": "Peg Basket title screen: a woven basket in a 3D school compound",
+      "coverCaption": "In the browser, no install",
+      "problem": {
+        "title": "A game everyone remembers, and nowhere to play it.",
+        "text": "Peg battles live in childhood memories. Bringing them online means live turns between two phones on different browsers, with nothing to install and no account to create."
+      },
+      "built": {
+        "title": "A 3D workshop and live battles from a link.",
+        "text": "Players build pegs in a 3D workshop, then battle turn by turn in rooms that run on Cloudflare Durable Objects. Quick-match, spectating, a daily challenge leaderboard and a public stats page."
+      },
+      "features": [
+        { "title": "Same result on every phone", "text": "Chrome and Safari compute Math.sin differently, so throws drifted. Custom math, a hash every turn and a resync on mismatch fixed it." },
+        { "title": "Live rooms", "text": "Share a link and play turn by turn, or quick-match and spectate. WebSocket rooms hibernate when idle, so idle rooms cost nothing." },
+        { "title": "Measured in public", "text": "Players, sessions, battles and countries are counted on a public /stats page." }
+      ],
+      "arch": [
+        { "title": "Input", "text": "Moves and room messages" },
+        { "title": "Deterministic sim", "text": "Own math functions, hashed every turn" },
+        { "title": "Rooms and data", "text": "Durable Objects, D1 database" },
+        { "title": "3D client", "text": "Three.js, Rapier physics, Web Audio" }
+      ],
+      "lessons": [
+        "Floating-point maths is not the same in every browser. Multiplayer games need their own.",
+        "Keeping the whole game near 1.4 MB matters more than visual polish on mid-range phones.",
+        "End-to-end tests in Playwright cover the room flow, because multiplayer bugs rarely show up with one player."
+      ]
+    }
+  ],
+  "about": {
+    "focus": "Full-stack web, real-time systems, data",
+    "lookingFor": "Junior or graduate full-stack role, remote",
+    "slides": [
+      {
+        "label": "Who I am",
+        "paragraphs": [
+          "I'm Ademola Emmanuel Adegbola, a software engineer from Port Harcourt, Nigeria. I completed my B.Sc. in Software Engineering at the University of Europe for Applied Sciences in February 2026 and graduated in November.",
+          "I founded Ajobook and built all of it, and I like problems with a live edge: a shop's books that must balance, rooms full of players, telemetry arriving sixty times a second."
+        ]
+      },
+      {
+        "label": "How I work",
+        "title": "Measure first, then trust it.",
+        "paragraphs": [
+          "Every project checks itself against the real world. Ajobook compares every balance before and after a release; PhysLab's masses are compared with CERN's published values; Pit Wall replays real races as regression tests.",
+          "When the honest answer is no, I write that down too. Two of my research projects ended that way."
+        ]
+      },
+      {
+        "label": "Off-screen",
+        "title": "Why I build.",
+        "paragraphs": [
+          "If I could do one thing, whatever else happened, it would be to build and bring to life as much as I can in my lifetime."
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "inner": ["TypeScript", "SQL", "React"],
+    "middle": ["Next.js", "Node.js", "PostgreSQL", "Supabase", "Cloudflare", "Python"],
+    "outer": ["Playwright", "Electron", "Three.js", "WebSockets", "GitHub Actions", "MQL5"]
+  },
+  "lab": [
+    {
+      "label": "Trading research · 39 written studies",
+      "title": "PropDesk: a backtester that judges trading ideas before any money moves.",
+      "text": "Each idea is tested on data it never saw and written up with a go or no-go. The lesson in numbers: a hindsight-picked portfolio showed a Sharpe ratio of 1.21; tested honestly, walk-forward, it was 0.40."
+    },
+    {
+      "label": "Football model · Python, 20,109 matches",
+      "title": "betpredict: can a Poisson model beat the bookmaker?",
+      "text": "Dixon-Coles ratings with xG, tested match by match. Verdict: no edge. Its log loss of 0.9805 trails the closing line's 0.9630, and 90% of the apparent value sat in longshots where the margin is widest."
+    }
+  ]
+}
