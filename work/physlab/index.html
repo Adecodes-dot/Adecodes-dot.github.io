@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PhysLab: case study · Ademola Adegbola</title>
+<meta name="description" content="Six browser labs where you test predictions against real data: 100,000 CMS collision events and 6,470 NASA exoplanets, with uncertainties. Masses land within 0.0006 GeV of CMS&#39;s published values, in 43 kB of code.">
+<meta property="og:title" content="PhysLab: case study · Ademola Adegbola">
+<meta property="og:description" content="Six browser labs where you test predictions against real data: 100,000 CMS collision events and 6,470 NASA exoplanets, with uncertainties. Masses land within 0.0006 GeV of CMS&#39;s published values, in 43 kB of code.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#06070B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.35' cy='.3'%3E%3Cstop offset='0' stop-color='%23fff'/%3E%3Cstop offset='.55' stop-color='%239AA1AF'/%3E%3Cstop offset='1' stop-color='%232A2F3B'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='15' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400..700&family=Hanken+Grotesk:wght@400;500;600&family=Martian+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script>
+  // Arrival sequence plays once per browser session.
+  document.documentElement.classList.add('js');
+  try { if (sessionStorage.getItem('arrived')) document.documentElement.classList.add('arrived'); sessionStorage.setItem('arrived', '1'); } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="case-hero stars">
+  <header class="topbar"><div class="nav wrap">
+  <a class="brand" href="../../" aria-label="Adecodes, home">
+    <span class="brand-dot" aria-hidden="true"></span><span class="chrome">Adecodes</span>
+  </a>
+  <nav aria-label="Main">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../../#work">All work</a></li>
+      <li><a href="../../#contact">Contact</a></li>
+      <li><a class="pill pill--solid" href="../../assets/Ademola-Adegbola-Resume.pdf">Résumé <span aria-hidden="true">↓</span></a></li>
+    </ul>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <svg class="icon-open" width="18" height="12" viewBox="0 0 18 12" aria-hidden="true"><path d="M0 1h18M0 11h12" stroke="currentColor" stroke-width="1.6"/></svg>
+      <svg class="icon-close" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.6"/></svg>
+    </button>
+  </nav>
+</div></header>
+  <span class="planet planet--wire case-planet" aria-hidden="true"></span>
+  <div class="wrap case-head" id="main">
+    <a class="label back" href="../../#work">← Selected work</a>
+    <p class="label label--accent">Case study · 03 of 04</p>
+    <h1><span class="display display--xl chrome">PhysLab</span><span class="voice">physics you can poke at.</span></h1>
+    <p class="lede">Six browser labs where you test predictions against real data: 100,000 CMS collision events and 6,470 NASA exoplanets, with uncertainties. Masses land within 0.0006 GeV of CMS&#39;s published values, in 43 kB of code.</p>
+    <dl class="meta">
+      <div><dt class="label">Role</dt><dd>Solo: design, physics, code, data</dd></div><div><dt class="label">Year</dt><dd>2026</dd></div><div><dt class="label">Stack</dt><dd>JavaScript, Canvas, GitHub Actions</dd></div>
+      <div><dt class="label">Links</dt><dd class="meta-links"><a class="ext" href="https://adecodes-dot.github.io/physlab/" rel="noopener">Live <span aria-hidden="true">↗</span></a><a class="ext" href="https://github.com/Adecodes-dot/physlab" rel="noopener">Code <span aria-hidden="true">↗</span></a></dd></div>
+    </dl>
+  </div>
+</div>
+<main>
+  <section class="wrap case-shot"><figure class="shot"><img src="../../assets/shots/physlab.png" alt="PhysLab dimuon mass spectrum from 100,000 CMS events, with J/ψ, Υ and Z peaks marked" loading="lazy" decoding="async"><figcaption class="label">Dimuon mass spectrum, CMS 2011 data</figcaption></figure></section>
+  <section class="wrap two-col">
+    <div class="stack"><p class="label">The problem</p><h2 class="h3">People read about physics. They rarely test it.</h2><p class="body muted">Open datasets from CERN and NASA are public, but using them takes specialist tools. Learners meet equations, not measurements, and never check a prediction against real data with real uncertainty.</p></div>
+    <div class="stack"><p class="label">What I built</p><h2 class="h3">Labs that open in a tab and run on the real numbers.</h2><p class="body muted">Six labs share one set of pure physics functions. A notebook makes you lock a prediction before you see the result, and a bench fits your own CSV files. No build step and no runtime dependencies.</p></div>
+  </section>
+  <section class="wrap features" aria-label="Features">
+    <article class="feature"><h3>Matches published physics</h3><p class="muted">J/ψ, Υ and Z peaks found in 100,000 CMS events land within 0.0006 GeV of CMS&#39;s values. 17 of 17 benchmarks pass in CI.</p></article>
+    <article class="feature"><h3>Caught a data defect</h3><p class="muted">Validation found about 5% of events with angle columns that disagreed with their momenta. The labs now compute from the momenta.</p></article>
+    <article class="feature"><h3>Small and fast</h3><p class="muted">Six labs, a notebook with 15 missions and a CSV bench in 43 kB of gzipped JavaScript.</p></article>
+  </section>
+  <section class="band" aria-labelledby="arch-title">
+    <div class="wrap section section--tight stack">
+      <p class="label">Architecture</p>
+      <h2 class="h3" id="arch-title">How it fits together</h2>
+      <ol class="arch"><li class="arch-box"><strong>Data snapshots</strong><span>CMS and NASA files bundled by a fetch script</span></li><li class="arch-box"><strong>Physics core</strong><span>Pure functions, 17/17 benchmarks pass</span></li><li class="arch-box"><strong>Notebook</strong><span>Predictions saved in the browser</span></li><li class="arch-box arch-box--end"><strong>Lab UI</strong><span>Canvas views on GitHub Pages, CI on GitHub Actions</span></li></ol>
+    </div>
+  </section>
+  <section class="wrap section lessons" aria-labelledby="lessons-title">
+    <h2 class="label" id="lessons-title">What I learned</h2>
+    <ul><li>Benchmarks against published results catch what unit tests miss: the tests were written around the same wrong columns.</li><li>Show the measurement before the formula. People ask better questions when the data comes first.</li><li>Fit errors shown are statistical only, and the page says so.</li></ul>
+  </section>
+</main>
+<a class="next stars" href="../pegbasket/">
+  <span class="wrap next-inner">
+    <span class="stack"><span class="label">Next world · 04</span><span class="display display--lg chrome">Peg Basket <span aria-hidden="true">→</span></span></span>
+    <span class="planet planet--ring next-planet" aria-hidden="true"><span class="planet-ring"></span></span>
+  </span>
+</a>
+<footer class="footer wrap">
+  <span class="label">© 2026 Ademola Adegbola · designed and built by hand</span>
+  <a class="label" href="../../">Home <span aria-hidden="true">↑</span></a>
+</footer>
+<script src="../../assets/main.js" defer></script>
+</body>
+</html>

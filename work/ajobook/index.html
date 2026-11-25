@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ajobook: case study · Ademola Adegbola</title>
+<meta name="description" content="Accounting software priced in naira for small Nigerian businesses that run on Excel today. I founded it and built all of it. In a pilot with a hospitality business, I imported nine months of its bank statements from two accounts and reconciled them to the kobo.">
+<meta property="og:title" content="Ajobook: case study · Ademola Adegbola">
+<meta property="og:description" content="Accounting software priced in naira for small Nigerian businesses that run on Excel today. I founded it and built all of it. In a pilot with a hospitality business, I imported nine months of its bank statements from two accounts and reconciled them to the kobo.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#06070B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.35' cy='.3'%3E%3Cstop offset='0' stop-color='%23fff'/%3E%3Cstop offset='.55' stop-color='%239AA1AF'/%3E%3Cstop offset='1' stop-color='%232A2F3B'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='15' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400..700&family=Hanken+Grotesk:wght@400;500;600&family=Martian+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script>
+  // Arrival sequence plays once per browser session.
+  document.documentElement.classList.add('js');
+  try { if (sessionStorage.getItem('arrived')) document.documentElement.classList.add('arrived'); sessionStorage.setItem('arrived', '1'); } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="case-hero stars">
+  <header class="topbar"><div class="nav wrap">
+  <a class="brand" href="../../" aria-label="Adecodes, home">
+    <span class="brand-dot" aria-hidden="true"></span><span class="chrome">Adecodes</span>
+  </a>
+  <nav aria-label="Main">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../../#work">All work</a></li>
+      <li><a href="../../#contact">Contact</a></li>
+      <li><a class="pill pill--solid" href="../../assets/Ademola-Adegbola-Resume.pdf">Résumé <span aria-hidden="true">↓</span></a></li>
+    </ul>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <svg class="icon-open" width="18" height="12" viewBox="0 0 18 12" aria-hidden="true"><path d="M0 1h18M0 11h12" stroke="currentColor" stroke-width="1.6"/></svg>
+      <svg class="icon-close" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.6"/></svg>
+    </button>
+  </nav>
+</div></header>
+  <span class="planet planet--craters case-planet" aria-hidden="true"></span>
+  <div class="wrap case-head" id="main">
+    <a class="label back" href="../../#work">← Selected work</a>
+    <p class="label label--accent">Case study · 01 of 04</p>
+    <h1><span class="display display--xl chrome">Ajobook</span><span class="voice">the books, kept honestly.</span></h1>
+    <p class="lede">Accounting software priced in naira for small Nigerian businesses that run on Excel today. I founded it and built all of it. In a pilot with a hospitality business, I imported nine months of its bank statements from two accounts and reconciled them to the kobo.</p>
+    <dl class="meta">
+      <div><dt class="label">Role</dt><dd>Founder and solo developer</dd></div><div><dt class="label">Year</dt><dd>2026</dd></div><div><dt class="label">Stack</dt><dd>Next.js, PostgreSQL, Supabase</dd></div>
+      <div><dt class="label">Links</dt><dd class="meta-links"><a class="ext" href="https://ajobook.com" rel="noopener">Visit <span aria-hidden="true">↗</span></a></dd></div>
+    </dl>
+  </div>
+</div>
+<main>
+  <section class="wrap case-shot"><figure class="shot"><img src="../../assets/shots/ajobook.png" alt="Ajobook home page with a sample daily sales snapshot in naira" loading="lazy" decoding="async"><figcaption class="label">ajobook.com</figcaption></figure></section>
+  <section class="wrap two-col">
+    <div class="stack"><p class="label">The problem</p><h2 class="h3">Small businesses keep their books in spreadsheets.</h2><p class="body muted">Lounges and shops track sales, stock and cash in Excel. Owners need real books, Nigerian tax (VAT, PAYE), and proof that staff cannot quietly change a record and keep the cash.</p></div>
+    <div class="stack"><p class="label">What I built</p><h2 class="h3">Drop in what you have. Get books you can trust.</h2><p class="body muted">Owners drop in workbooks, stock sheets and bank-statement PDFs and confirm them. Every sale, payment and stock count posts to a double-entry journal in PostgreSQL through database triggers, and every change by a person is kept.</p></div>
+  </section>
+  <section class="wrap features" aria-label="Features">
+    <article class="feature"><h3>Pilot with a real business</h3><p class="muted">A hospitality business&#39;s January to September statements from two bank accounts, imported and reconciled to the kobo, with its stock sheets and 24 staff: 5,902 journal entries and 571 sales.</p></article>
+    <article class="feature"><h3>Owner lock</h3><p class="muted">Staff can add records but never edit or delete them. Enforced with PostgreSQL row-level security on 49 of 49 tables, plus per-shift cash handover and a morning email to the owner.</p></article>
+    <article class="feature"><h3>Fast on real volumes</h3><p class="muted">A 5,913-line bank statement books in 9 seconds and undoes in 1.3. The owner dashboard loads in 0.1 to 0.3 seconds on 25,000 entries.</p></article>
+  </section>
+  <section class="band" aria-labelledby="arch-title">
+    <div class="wrap section section--tight stack">
+      <p class="label">Architecture</p>
+      <h2 class="h3" id="arch-title">From spreadsheet to trusted books</h2>
+      <ol class="arch"><li class="arch-box"><strong>Inputs</strong><span>Workbooks, POS, bank-statement PDFs</span></li><li class="arch-box"><strong>Server actions</strong><span>Next.js and checked database functions</span></li><li class="arch-box"><strong>Journal</strong><span>Postgres triggers, row-level security</span></li><li class="arch-box arch-box--end"><strong>Owner views</strong><span>Dashboard, reports, morning email</span></li></ol>
+    </div>
+  </section>
+  <section class="wrap section lessons" aria-labelledby="lessons-title">
+    <h2 class="label" id="lessons-title">What I learned</h2>
+    <ul><li>Releases to a live client follow a checklist: snapshot every balance, apply the migration in parts, compare function hashes, compare balances again, smoke-test. Balances matched before and after every checked release.</li><li>The first real user found a five-step import wizard too much. It became drop, then confirm.</li><li>Money that leaves with no explanation goes to a suspense account, not an expense, so nothing is counted twice and the owner sees what still needs an answer.</li></ul>
+  </section>
+</main>
+<a class="next stars" href="../pitwall/">
+  <span class="wrap next-inner">
+    <span class="stack"><span class="label">Next world · 02</span><span class="display display--lg chrome">Pit Wall <span aria-hidden="true">→</span></span></span>
+    <span class="planet planet--bands next-planet" aria-hidden="true"></span>
+  </span>
+</a>
+<footer class="footer wrap">
+  <span class="label">© 2026 Ademola Adegbola · designed and built by hand</span>
+  <a class="label" href="../../">Home <span aria-hidden="true">↑</span></a>
+</footer>
+<script src="../../assets/main.js" defer></script>
+</body>
+</html>
