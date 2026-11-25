@@ -16,7 +16,7 @@
     "status": "Open to junior and graduate full-stack roles · Remote"
   },
   "hero": {
-    "intro": "Full-stack engineer and 2026 software engineering graduate. I founded and built Ajobook, accounting software that runs a Nigerian business's books, and I ship real-time, data-heavy apps end to end.",
+    "intro": "Full-stack engineer and 2026 software engineering graduate. I founded and built Ajobook, accounting software for Nigerian small businesses, now piloted with a hospitality business, and I ship real-time, data-heavy apps end to end.",
     "description": "Ademola Adegbola, full-stack software engineer (B.Sc. 2026). Founder of Ajobook. Case studies: Ajobook, Pit Wall, PhysLab and Peg Basket."
   },
   "stack": ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL", "Supabase", "Cloudflare Workers", "Durable Objects", "Three.js", "Python", "Playwright", "GitHub Actions"],
@@ -25,9 +25,9 @@
       "slug": "ajobook",
       "name": "Ajobook",
       "planet": "craters",
-      "line": "Accounting software for Nigerian businesses, live with a pilot client. Books, point of sale, stock, payroll and owner controls.",
+      "line": "Accounting software for Nigerian businesses, live at ajobook.com and piloted with a hospitality business. Books, point of sale, stock, payroll and owner controls.",
       "tagline": "the books, kept honestly.",
-      "summary": "Accounting software priced in naira for small Nigerian businesses that run on Excel today. I founded it and built all of it. A hospitality business runs its books on it in a live pilot: nine months of bank statements from two accounts, reconciled to the kobo.",
+      "summary": "Accounting software priced in naira for small Nigerian businesses that run on Excel today. I founded it and built all of it. In a pilot with a hospitality business, I imported nine months of its bank statements from two accounts and reconciled them to the kobo.",
       "tags": ["Next.js", "PostgreSQL", "Supabase"],
       "year": "2026",
       "role": "Founder and solo developer",
@@ -45,7 +45,7 @@
         "text": "Owners drop in workbooks, stock sheets and bank-statement PDFs and confirm them. Every sale, payment and stock count posts to a double-entry journal in PostgreSQL through database triggers, and every change by a person is kept."
       },
       "features": [
-        { "title": "Live pilot", "text": "A hospitality business's January to September statements, two bank accounts, booked and reconciled to the kobo. 5,902 journal entries, 571 sales and a 24-person payroll imported." },
+        { "title": "Pilot with a real business", "text": "A hospitality business's January to September statements from two bank accounts, imported and reconciled to the kobo, with its stock sheets and 24 staff: 5,902 journal entries and 571 sales." },
         { "title": "Owner lock", "text": "Staff can add records but never edit or delete them. Enforced with PostgreSQL row-level security on 49 of 49 tables, plus per-shift cash handover and a morning email to the owner." },
         { "title": "Fast on real volumes", "text": "A 5,913-line bank statement books in 9 seconds and undoes in 1.3. The owner dashboard loads in 0.1 to 0.3 seconds on 25,000 entries." }
       ],
